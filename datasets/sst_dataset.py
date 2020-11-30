@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-@file  : imdb_dataset.py
+@file  : sst_dataset.py
 @author: zijun
 @contact : zijun_sun@shannonai.com
 @date  : 2020/11/17 11:45
@@ -18,7 +18,7 @@ from torch.utils.data import Dataset, DataLoader
 from datasets.collate_functions import collate_to_max_length
 
 
-class IMDBDataset(Dataset):
+class SSTDataset(Dataset):
 
     def __init__(self, directory, prefix, bert_path, max_length: int = 512):
         super().__init__()
@@ -52,7 +52,7 @@ def unit_test():
     root_path = "/data/nfsdata2/sunzijun/sstc/imdb_data"
     bert_path = "/data/nfsdata2/sunzijun/loop/roberta-base"
     prefix = "train"
-    dataset = IMDBDataset(directory=root_path, prefix=prefix, bert_path=bert_path)
+    dataset = SSTDataset(directory=root_path, prefix=prefix, bert_path=bert_path)
 
     dataloader = DataLoader(
         dataset=dataset,
