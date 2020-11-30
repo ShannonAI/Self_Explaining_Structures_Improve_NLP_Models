@@ -25,7 +25,7 @@ from torch.utils.data.dataloader import DataLoader
 from transformers import AdamW, get_linear_schedule_with_warmup, RobertaTokenizer
 
 from datasets.collate_functions import collate_to_max_length
-from datasets.imdb_dataset import IMDBDataset
+from datasets.sst_dataset import SSTDataset
 from datasets.snli_dataset import SNLIDataset
 from explain.model import ExplainableModel
 from utils.radom_seed import set_random_seed
@@ -156,9 +156,9 @@ class ExplainNLP(pl.LightningModule):
                                   bert_path=self.bert_dir,
                                   max_length=self.args.max_length)
         else:
-            dataset = IMDBDataset(directory=self.args.data_dir, prefix=prefix,
-                                  bert_path=self.bert_dir,
-                                  max_length=self.args.max_length)
+            dataset = SSTDataset(directory=self.args.data_dir, prefix=prefix,
+                                 bert_path=self.bert_dir,
+                                 max_length=self.args.max_length)
         dataloader = DataLoader(
             dataset=dataset,
             batch_size=self.args.batch_size,
