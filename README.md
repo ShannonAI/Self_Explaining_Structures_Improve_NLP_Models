@@ -5,9 +5,6 @@ Code, models and Datasets for[ã€ŠSelf-Explaining Structures Improve NLP Modelsã€
 `pip install -r requirements.txt`
 
 ## Prepare Datasets and Models
-- Download the IMDB dataset, the official corpus can be found [HERE](http://ai.stanford.edu/~amaas/data/sentiment/).
-We provide processed raw text which you can download [HERE](https://drive.google.com/drive/folders/1tJwIkeKJ5otidp6vk2a7cTwzN7eUaviP?usp=sharing).
-Save the processed raw text dataset at `[IMDB_PATA_PATH]`.
 - Download the SST-5 dataset, the official corpus can be found [HERE](https://nlp.stanford.edu/sentiment/index.html).
 We provide processed raw text which you can download [HERE](https://drive.google.com/drive/folders/1TYR-yRw3NXqfXnMSvFDxGTdf1urGfrPY?usp=sharing)
 Save the processed raw text dataset at `[SST_PATA_PATH]`.
