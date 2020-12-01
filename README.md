@@ -6,7 +6,7 @@ Code, models and Datasets for[ã€ŠSelf-Explaining Structures Improve NLP Modelsã€
 
 ## Prepare Datasets and Models
 - Download the SST-5 dataset, the official corpus can be found [HERE](https://nlp.stanford.edu/sentiment/index.html).
-We provide processed raw text which you can download [HERE](https://drive.google.com/drive/folders/1TYR-yRw3NXqfXnMSvFDxGTdf1urGfrPY?usp=sharing)
+We provide processed raw text which you can download [HERE](https://drive.google.com/drive/folders/1TYR-yRw3NXqfXnMSvFDxGTdf1urGfrPY?usp=sharing).
 Save the processed raw text dataset at `[SST_PATA_PATH]`.
 - Download the SNLI dataset, the official corpus can be found [HERE](https://nlp.stanford.edu/projects/snli/).
 Save the SNLI dataset at `[SNLI_PATA_PATH]`.
@@ -73,7 +73,6 @@ python trainer.py \
 --precision 16 \
 --lr=2e-5 \
 --batch_size=10 \
---lamb=1.0 \
 --workers=4 \
 --max_epoch=20
 ```
