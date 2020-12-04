@@ -12,6 +12,8 @@ Save the processed raw text dataset at `[SST_PATA_PATH]`.
 Save the SNLI dataset at `[SNLI_PATA_PATH]`.
 - Download the vanilla RoBERTa-base model released by HuggingFace. Save the model at `[ROBERTA_BASE_PATH]`,
 it can be found [HERE](https://huggingface.co/roberta-base)
+- Download the model checkpoints we trained for different tasks. You can use our checkpoint for evaluation.
+the checkpoints can be download [HERE](https://drive.google.com/drive/folders/1RV5OJSzN_7p-YkjkmAhq2vzhouZEtzSS?usp=sharing)
 
 ## Reproduce paper results step by step
 In this paper, we utilize self-explaining structures in different NLP tasks. This repo contains all train 
@@ -39,6 +41,7 @@ python trainer.py \
 After training, the checkpoints and training log will be saved at `[SELF_EXPLAINING_MODEL_CHECKPOINTS]`.
 ### 2.Evaluate the self-explaining model
 Run the following evaluation command to get the performance on test dataset.
+You can use the checkpoint you trained or just download our checkpoint to evaluate test dataset.
 After evaluation, you will get two output file at `[SPAN_SAVE_PATH]`: `output.txt` and `test.txt`.
 `output.txt` records visual extract spans and prediction results.
 `text.txt` only records top-ranked span as span-base test data for next stage.
