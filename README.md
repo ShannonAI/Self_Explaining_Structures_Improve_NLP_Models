@@ -1,5 +1,5 @@
 # self-explaining-NLP
-Code, models and Datasets for[《Self-Explaining Structures Improve NLP Models》]().
+Code, models and Datasets for[《Self-Explaining Structures Improve NLP Models》](http://arxiv.org/abs/2012.01786).
 
 ## installation 
 `pip install -r requirements.txt`
