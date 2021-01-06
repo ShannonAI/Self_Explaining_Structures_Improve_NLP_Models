@@ -1,17 +1,19 @@
 # self-explaining-NLP
-Code, models and Datasets for[《Self-Explaining Structures Improve NLP Models》]().
+Code, models and Datasets for[《Self-Explaining Structures Improve NLP Models》](http://arxiv.org/abs/2012.01786).
 
 ## installation 
 `pip install -r requirements.txt`
 
 ## Prepare Datasets and Models
 - Download the SST-5 dataset, the official corpus can be found [HERE](https://nlp.stanford.edu/sentiment/index.html).
-We provide processed raw text which you can download [HERE](https://drive.google.com/drive/folders/1TYR-yRw3NXqfXnMSvFDxGTdf1urGfrPY?usp=sharing)
+We provide processed raw text which you can download [HERE](https://drive.google.com/drive/folders/1TYR-yRw3NXqfXnMSvFDxGTdf1urGfrPY?usp=sharing).
 Save the processed raw text dataset at `[SST_PATA_PATH]`.
 - Download the SNLI dataset, the official corpus can be found [HERE](https://nlp.stanford.edu/projects/snli/).
 Save the SNLI dataset at `[SNLI_PATA_PATH]`.
 - Download the vanilla RoBERTa-base model released by HuggingFace. Save the model at `[ROBERTA_BASE_PATH]`,
 it can be found [HERE](https://huggingface.co/roberta-base)
+- Download the model checkpoints we trained for different tasks. You can use our checkpoint for evaluation.
+the checkpoints can be download [HERE](https://drive.google.com/drive/folders/1RV5OJSzN_7p-YkjkmAhq2vzhouZEtzSS?usp=sharing)
 
 ## Reproduce paper results step by step
 In this paper, we utilize self-explaining structures in different NLP tasks. This repo contains all train 
@@ -39,6 +41,7 @@ python trainer.py \
 After training, the checkpoints and training log will be saved at `[SELF_EXPLAINING_MODEL_CHECKPOINTS]`.
 ### 2.Evaluate the self-explaining model
 Run the following evaluation command to get the performance on test dataset.
+You can use the checkpoint you trained or just download our checkpoint to evaluate test dataset.
 After evaluation, you will get two output file at `[SPAN_SAVE_PATH]`: `output.txt` and `test.txt`.
 `output.txt` records visual extract spans and prediction results.
 `text.txt` only records top-ranked span as span-base test data for next stage.
@@ -73,7 +76,6 @@ python trainer.py \
 --precision 16 \
 --lr=2e-5 \
 --batch_size=10 \
---lamb=1.0 \
 --workers=4 \
 --max_epoch=20
 ```
